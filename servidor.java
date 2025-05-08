@@ -18,10 +18,8 @@ class TCPServer {
               new BufferedReader(new 
               InputStreamReader(connectionSocket.getInputStream())); 
 
-              
-clientSentence = inFromClient.readLine();  
-capitalizedSentence = clientSentence.toUpperCase() + '\n';  
-outToClient.writeBytes(capitalizedSentence); 
+
+
       }
     }
 }
