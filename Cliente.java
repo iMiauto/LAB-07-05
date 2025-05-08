@@ -22,7 +22,7 @@ public class Cliente {// se crea la clase cliente
 
         clientSocket.close();
         //Cambio
-    }// fin del main
+    } // fin del main
 }// fin de la clase
 
 // hola mundo
