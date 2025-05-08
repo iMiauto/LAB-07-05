@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import java.io.*;
 import java.net.*;
 
@@ -25,4 +24,4 @@ public class Cliente {// se crea la clase cliente
 }// fin de la clase
 
 // hola mundo
->>>>>>> bf818f53037d1c2594cd495a84728df3e19fe89d
+
