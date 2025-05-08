@@ -4,7 +4,7 @@ import java.net.*;
 class TCPServer {
 
     public static void main(String argv[]) throws Exception {
-        ServerSocket welcomeSocket = new ServerSocket(6789);
+        ServerSocket welcomeSocket = new ServerSocket(7849);
         System.out.println("Servidor iniciado. Esperando conexiones...");
 
         while (true) {
@@ -16,7 +16,7 @@ class TCPServer {
             DataOutputStream outToClient = new DataOutputStream(
                 connectionSocket.getOutputStream());
 
-            String clientSentence = inFromClient.readLine(); // ✅ Declarada correctamente
+            String clientSentence = inFromClient.readLine(); 
             String[] numeros = clientSentence.split(" ");
 
             int num1 = Integer.parseInt(numeros[0]);
@@ -25,7 +25,7 @@ class TCPServer {
 
             outToClient.writeBytes("Resultado: " + suma + "\n");
 
-            connectionSocket.close(); // opcional si solo procesas una solicitud por conexión
+            connectionSocket.close(); 
         }
     }
 }
