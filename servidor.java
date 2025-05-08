@@ -5,10 +5,12 @@ class TCPServer {
  
   public static void main(String argv[]) throws Exception  
     {  
-      int  a;  
-      int  b;  
+      String clientSentence; 
+      String capitalizedSentence;  
  
-      ServerSocket welcomeSocket = new ServerSocket(6789);  
+      ServerSocket welcomeSocket = new ServerSocket(6789);
+
+
    
       while(true) {  
    
@@ -17,9 +19,11 @@ class TCPServer {
            BufferedReader inFromClient =  
               new BufferedReader(new 
               InputStreamReader(connectionSocket.getInputStream())); 
-
-            // ajajajja
-
+              DataOutputStream  outToClient =  
+new DataOutputStream(connectionSocket.getOutputStream());  
+clientSentence = inFromClient.readLine();  
+capitalizedSentence = clientSentence.toUpperCase() + '\n';  
+outToClient.writeBytes(capitalizedSentence); 
       }
     }
-}
+} 
