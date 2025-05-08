@@ -4,7 +4,7 @@ import java.net.*;
 class TCPServer {
 
     public static void main(String argv[]) throws Exception {
-        ServerSocket welcomeSocket = new ServerSocket(7849);
+        ServerSocket welcomeSocket = new ServerSocket(7489);
         System.out.println("Servidor iniciado. Esperando conexiones...");
 
         while (true) {
