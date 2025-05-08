@@ -4,7 +4,7 @@ import java.net.*;
 public class Cliente {
     public static void main(String argv[]) throws Exception {
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
-        Socket clientSocket = new Socket( "DESKTOP-T5P10TL", 7489);
+        Socket clientSocket = new Socket( "DESKTOP-SLNVM6A", 7489);
         DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
         BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
