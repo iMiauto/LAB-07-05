@@ -1,6 +1,3 @@
-<<<<<<< HEAD
- 
-=======
 import java.io.*;  
 import java.net.*;  
  
@@ -26,4 +23,3 @@ class TCPServer {
       }
     }
 }
->>>>>>> bf818f53037d1c2594cd495a84728df3e19fe89d
