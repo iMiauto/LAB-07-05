@@ -1,3 +1,5 @@
+// cambios
+
 import java.io.*;
 import java.net.*;
 
@@ -23,3 +25,9 @@ public class Cliente {// se crea la clase cliente
 }// fin de la clase
 
 // hola mundo
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> a86c5895609959ae2c89ef5c16ee206b002d215e
