@@ -21,6 +21,7 @@ public class Cliente {// se crea la clase cliente
         System.out.println("FROM SERVER: " + modifiedSentence);
 
         clientSocket.close();
+        //Cambio
     }// fin del main
 }// fin de la clase
 
