@@ -1,25 +1,33 @@
-import java.io.*;  
-import java.net.*;  
- 
-class TCPServer {  
- 
-  public static void main(String argv[]) throws Exception  
-    {  
-      int  a;  
-      int  b;  
- 
-      ServerSocket welcomeSocket = new ServerSocket(6789);  
-   
-      while(true) {  
-   
-            Socket connectionSocket = welcomeSocket.accept();  
- 
-           BufferedReader inFromClient =  
-              new BufferedReader(new 
-              InputStreamReader(connectionSocket.getInputStream())); 
+import java.io.*;
+import java.net.*;
 
-            // ajajajja
+class TCPServer {
 
-      }
+    public static void main(String argv[]) throws Exception {
+        ServerSocket welcomeSocket = new ServerSocket(7489);
+        System.out.println("Servidor iniciado. Esperando conexiones...");
+
+        while (true) {
+            Socket connectionSocket = welcomeSocket.accept();
+            System.out.println("Cliente conectado.");
+
+            BufferedReader inFromClient = new BufferedReader(
+                new InputStreamReader(connectionSocket.getInputStream()));
+            DataOutputStream outToClient = new DataOutputStream(
+                connectionSocket.getOutputStream());
+
+            String clientSentence = inFromClient.readLine(); 
+            String[] numeros = clientSentence.split(" ");
+
+            int num1 = Integer.parseInt(numeros[0]);
+            int num2 = Integer.parseInt(numeros[1]);
+            int suma = num1 + num2;
+
+            outToClient.writeBytes("Resultado: " + suma + "\n");
+
+            connectionSocket.close(); 
+        }
     }
 }
+
+
