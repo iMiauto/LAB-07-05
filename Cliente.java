@@ -25,6 +25,7 @@ public class Cliente {// se crea la clase cliente
     } // fin del main
 }// fin de la clase
 
+
 // hola mundo
 // ba<<<<<<< HEAD
 =======
