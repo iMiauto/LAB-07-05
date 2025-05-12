@@ -6,7 +6,7 @@ import java.net.*;
 public class Cliente {// se crea la clase cliente 
     public static void main(String argv[]) throws Exception {// inicio del main
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
-        Socket clientSocket = new Socket( "DESKTOP-SLNVM6A", 7489);
+        Socket clientSocket = new Socket( "localhost", 7489);
         DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
         BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 // el cliente escribe los numeros que va a guardar en variables para despues enviarlos al servidor 
@@ -24,12 +24,3 @@ public class Cliente {// se crea la clase cliente
         //Cambio
     } // fin del main
 }// fin de la clase
-
-
-// hola mundo
-// ba<<<<<<< HEAD
-=======
-
-
-
->>>>>>> a86c5895609959ae2c89ef5c16ee206b002d215e
